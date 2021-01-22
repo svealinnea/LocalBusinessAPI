@@ -9,7 +9,7 @@ namespace BusinessLookupApi.Models
     [StringLength(50)]
     public string Name { get; set; }
     [Required]
-    [StringLength(200)]
+    [StringLength(200)]    
     public string Address { get; set; }
   }
 }
