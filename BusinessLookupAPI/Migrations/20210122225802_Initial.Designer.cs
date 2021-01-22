@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BusinessLookupAPI.Migrations
 {
     [DbContext(typeof(BusinessLookupApiContext))]
-    [Migration("20210122184149_SeedData")]
-    partial class SeedData
+    [Migration("20210122225802_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -18,9 +18,9 @@ namespace BusinessLookupAPI.Migrations
                 .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("BusinessLookupApi.Models.Business", b =>
+            modelBuilder.Entity("BusinessLookupApi.Models.Restaurant", b =>
                 {
-                    b.Property<int>("BusinessId")
+                    b.Property<int>("RestaurantId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Address")
@@ -31,38 +31,38 @@ namespace BusinessLookupAPI.Migrations
                         .IsRequired()
                         .HasMaxLength(50);
 
-                    b.HasKey("BusinessId");
+                    b.HasKey("RestaurantId");
 
-                    b.ToTable("Businesses");
+                    b.ToTable("Restaurants");
 
                     b.HasData(
                         new
                         {
-                            BusinessId = 1,
+                            RestaurantId = 1,
                             Address = "1220 Main St #100, Vancouver, WA 98660",
                             Name = "Amaro’s Table"
                         },
                         new
                         {
-                            BusinessId = 2,
+                            RestaurantId = 2,
                             Address = "777 Waterfront Way Suite 101, Vancouver, WA 98660",
                             Name = "WildFin American Grill"
                         },
                         new
                         {
-                            BusinessId = 3,
+                            RestaurantId = 3,
                             Address = "108 W 8th St, Vancouver, WA 98660",
                             Name = "Moo Burgers and Beer"
                         },
                         new
                         {
-                            BusinessId = 4,
+                            RestaurantId = 4,
                             Address = "213 W 11th St, Vancouver, WA 98660",
                             Name = "Thai Orchid Restaurant"
                         },
                         new
                         {
-                            BusinessId = 5,
+                            RestaurantId = 5,
                             Address = "108 E 7th St Suite B, Vancouver, WA 98660",
                             Name = "Slow Fox Chili"
                         });

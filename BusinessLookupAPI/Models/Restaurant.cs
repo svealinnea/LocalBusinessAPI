@@ -2,9 +2,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BusinessLookupApi.Models
 {
-  public class Business 
+  public class Restaurant 
   {
-    public int BusinessId { get; set; }
+    public int RestaurantId { get; set; }
     [Required]
     [StringLength(50)]
     public string Name { get; set; }

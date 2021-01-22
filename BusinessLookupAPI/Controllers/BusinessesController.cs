@@ -17,11 +17,11 @@ namespace BusinessLookupApi.Controllers
       _db = db;
     }
 
-    // GET api/businesses
+   
     [HttpGet]
-    public ActionResult<IEnumerable<Business>> Get(string address, string name)
+    public ActionResult<IEnumerable<Restaurant>> Get(string address, string name)
     {
-      var query = _db.Businesses.AsQueryable();
+      var query = _db.Restaurants.AsQueryable();
 
       if (address !=null)
       {
@@ -36,35 +36,35 @@ namespace BusinessLookupApi.Controllers
       return query.ToList();
     }
 
-    // POST api/businesses
+    
     [HttpPost]
-    public void Post([FromBody] Business business) 
+    public void Post([FromBody] Restaurant restaurant) 
     {
-      _db.Businesses.Add(business);
+      _db.Restaurants.Add(restaurant);
       _db.SaveChanges();
     }
 
-    // GET api/busineses/5
+    
     [HttpGet("{id}")]
-    public ActionResult<Business> Get(int id)
+    public ActionResult<Restaurant> Get(int id)
     {
-        return _db.Businesses.FirstOrDefault(entry => entry.BusinessId == id);
+        return _db.Restaurants.FirstOrDefault(entry => entry.RestaurantId == id);
     }
     
     [HttpPut("{id}")]
-    public void Put(int id, [FromBody] Business business)
+    public void Put(int id, [FromBody] Restaurant restaurant)
     {
-        business.BusinessId = id;
-        _db.Entry(business).State = EntityState.Modified;
+        restaurant.RestaurantId = id;
+        _db.Entry(restaurant).State = EntityState.Modified;
         _db.SaveChanges();
     }
 
-        // DELETE api/businesses/5
+  
     [HttpDelete("{id}")]
     public void Delete(int id)
     {
-      var businessToDelete = _db.Businesses.FirstOrDefault(entry => entry.BusinessId == id);
-      _db.Businesses.Remove(businessToDelete);
+      var restaurantToDelete = _db.Restaurants.FirstOrDefault(entry => entry.RestaurantId == id);
+      _db.Restaurants.Remove(restaurantToDelete);
       _db.SaveChanges();
     }
 
