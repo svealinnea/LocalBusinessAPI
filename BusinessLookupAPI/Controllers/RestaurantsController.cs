@@ -8,16 +8,15 @@ namespace BusinessLookupApi.Controllers
 {
   [Route("api/[controller]")] 
   [ApiController]
-  public class BusinessesController : ControllerBase
+  public class RestaurantsController : ControllerBase
   {
     private BusinessLookupApiContext _db;
 
-    public BusinessesController(BusinessLookupApiContext db)  
+    public RestaurantsController(BusinessLookupApiContext db)  
     {
       _db = db;
     }
 
-   
     [HttpGet]
     public ActionResult<IEnumerable<Restaurant>> Get(string address, string name)
     {
