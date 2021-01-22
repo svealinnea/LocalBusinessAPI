@@ -30,6 +30,8 @@ namespace BusinessLookupApi
             services.AddDbContext<BusinessLookupApiContext>(opt =>
             opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +49,14 @@ namespace BusinessLookupApi
 
             // app.UseHttpsRedirection();
             app.UseMvc();
+            
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
+                
         }
     }
 }
