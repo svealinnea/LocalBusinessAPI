@@ -17,7 +17,7 @@ namespace BusinessLookupApi.Controllers
       _db = db;
     }
 
-    // GET api/shops
+
     [HttpGet]
     public ActionResult<IEnumerable<Shop>> Get(string address, string name)
     {
@@ -36,7 +36,7 @@ namespace BusinessLookupApi.Controllers
       return query.ToList();
     }
 
-    // POST api/shops
+
     [HttpPost]
     public void Post([FromBody] Shop shop) 
     {
@@ -44,7 +44,6 @@ namespace BusinessLookupApi.Controllers
       _db.SaveChanges();
     }
 
-    // GET api/shops/5
     [HttpGet("{id}")]
     public ActionResult<Shop> Get(int id)
     {
