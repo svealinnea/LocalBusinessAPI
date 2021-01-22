@@ -10,6 +10,8 @@ namespace BusinessLookupApi.Models
     }
     public DbSet<Shop> Shops { get; set; }
     public DbSet<Restaurant> Restaurants { get; set; }
+
+    public DbSet<Hotel> Hotels { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
       builder.Entity<Shop>()
