@@ -204,6 +204,34 @@ PUT /api/restaurants/{id}
 DELETE /api/restaurants/{id}
 ```
 
+### Shops
+
+Access the name and address for some shops in the Vancouver area
+
+HTTP Request Structure: 
+
+```
+GET /api/shops
+POST /api/shops
+GET /api/shops/{id}
+PUT /api/shops/{id}
+DELETE /api/shops/{id}
+```
+
+### Hotels
+
+Access the name and address for some of the best hotels in the Vancouver area
+
+Http Request Structure:
+
+```
+GET /api/hotels
+POST /api/hotels
+GET /api/hotels/{id}
+PUT /api/hotels/{id}
+DELETE /api/hotels/{id}
+```
+
 **Example of a Query:** 
 
 ```

@@ -30,6 +30,13 @@ namespace BusinessLookupApi.Models
           new Restaurant { RestaurantId = 4, Name = "Thai Orchid Restaurant",  Address = "213 W 11th St, Vancouver, WA 98660"},
           new Restaurant { RestaurantId = 5, Name = "Slow Fox Chili", Address = "108 E 7th St Suite B, Vancouver, WA 98660" }
         );
+
+        builder.Entity<Hotel>().HasData(
+          new Hotel { HotelId = 1, Name = "The Heathman Lodge", Address = "7801 NE Greenwood Dr, Vancouver, WA 98662", Stars = 3, },
+          new Hotel { HotelId = 2, Name = "Hilton Vancouver Washington", Address = "301 W 6th St, Vancouver, WA 98660", Stars = 4, },
+          new Hotel { HotelId = 3, Name = "The Briar Rose Inn", Address = "314 W 11th St, Vancouver, WA 98660", Stars = 2, },
+          new Hotel { HotelId = 4, Name = "Homewood Suites by Hilton Vancouver", Address = "701 SE Columbia Shores Blvd, Vancouver, WA 98661", Stars = 3, }
+        );
     }
   }
 }
