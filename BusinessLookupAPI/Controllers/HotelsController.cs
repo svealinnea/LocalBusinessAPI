@@ -19,7 +19,7 @@ namespace BusinessLookupApi.Controllers
 
 
     [HttpGet]
-    public ActionResult<IEnumerable<Hotel>> Get(string address, string name)
+    public ActionResult<IEnumerable<Hotel>> Get(string address, string name, int stars)
     {
       var query = _db.Hotels.AsQueryable();
 
@@ -31,6 +31,11 @@ namespace BusinessLookupApi.Controllers
       if (name != null)
       {
         query = query.Where(entry => entry.Name ==  name);
+      }  
+
+      if (stars != -1)
+      {
+        query = query.Where(entry => entry.Stars == stars);
       }  
 
       return query.ToList();
