@@ -35,7 +35,8 @@ namespace BusinessLookupApi.Models
           new Hotel { HotelId = 1, Name = "The Heathman Lodge", Address = "7801 NE Greenwood Dr, Vancouver, WA 98662", Stars = 3, },
           new Hotel { HotelId = 2, Name = "Hilton Vancouver Washington", Address = "301 W 6th St, Vancouver, WA 98660", Stars = 4, },
           new Hotel { HotelId = 3, Name = "The Briar Rose Inn", Address = "314 W 11th St, Vancouver, WA 98660", Stars = 2, },
-          new Hotel { HotelId = 4, Name = "Homewood Suites by Hilton Vancouver", Address = "701 SE Columbia Shores Blvd, Vancouver, WA 98661", Stars = 3, }
+          new Hotel { HotelId = 4, Name = "Homewood Suites by Hilton Vancouver", Address = "701 SE Columbia Shores Blvd, Vancouver, WA 98661", Stars = 3, }, 
+          new Hotel { HotelId = 5, Name= "Best Western Premier Hotel at Fisher's Landing", Address = "1500 SE 167th Ave, Vancouver, WA 98683", Stars = 3, }
         );
     }
   }

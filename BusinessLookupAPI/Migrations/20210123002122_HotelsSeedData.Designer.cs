@@ -2,14 +2,16 @@
 using BusinessLookupApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BusinessLookupAPI.Migrations
 {
     [DbContext(typeof(BusinessLookupApiContext))]
-    partial class BusinessLookupApiContextModelSnapshot : ModelSnapshot
+    [Migration("20210123002122_HotelsSeedData")]
+    partial class HotelsSeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,13 +64,6 @@ namespace BusinessLookupAPI.Migrations
                             HotelId = 4,
                             Address = "701 SE Columbia Shores Blvd, Vancouver, WA 98661",
                             Name = "Homewood Suites by Hilton Vancouver",
-                            Stars = 3
-                        },
-                        new
-                        {
-                            HotelId = 5,
-                            Address = "1500 SE 167th Ave, Vancouver, WA 98683",
-                            Name = "Best Western Premier Hotel at Fisher's Landing",
                             Stars = 3
                         });
                 });

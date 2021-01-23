@@ -204,6 +204,7 @@ PUT /api/restaurants/{id}
 DELETE /api/restaurants/{id}
 ```
 
+-------------------------------------------------------------------------
 ### Shops
 
 Access the name and address for some shops in the Vancouver area
@@ -218,6 +219,7 @@ PUT /api/shops/{id}
 DELETE /api/shops/{id}
 ```
 
+--------------------------------------------------------------------------
 ### Hotels
 
 Access the name and address for some of the best hotels in the Vancouver area
@@ -247,6 +249,22 @@ https://localhost:5000/api/restaurants/1
         "address": "1220 Main St #100, Vancouver, WA 98660"
     },
 ```
+**Example of a Search Query**
+```
+http://localhost:5000/api/hotels/?stars=4
+```
+
+JSON Response: 
+```
+[
+    {
+        "hotelId": 2,
+        "name": "Hilton Vancouver Washington",
+        "address": "301 W 6th St, Vancouver, WA 98660",
+        "stars": 4
+    }
+]
+```
 
 ## Technology Used
 
@@ -261,7 +279,7 @@ https://localhost:5000/api/restaurants/1
   
 ## Known Bugs
 
-No known bugs at the moment. 
+You can find hotels by id but the initial hotel list is not showing when you make a get request in postman. 
 
 ## Support and contact details
 You can reach out to me via email <svealinneawade@gmail.com>
